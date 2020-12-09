@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://andrew.pl/soapwebservice/students"
+           targetNamespace="http://andrew.pl/soapwebservice/students"
+           elementFormDefault="qualified">
+
+    <xs:element name="GetStudentDetailsRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+   </xs:element>
+
+    <xs:element name="GetStudentDetailsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="StudentDetails" type="tns:StudentDetails"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="StudentDetails">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long"/>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="passportNumber" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
