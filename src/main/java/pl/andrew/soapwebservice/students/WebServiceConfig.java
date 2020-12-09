@@ -1,4 +1,4 @@
-package pl.andrew.soapwebservice.config;
+package pl.andrew.soapwebservice.students;
 
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.ApplicationContext;
